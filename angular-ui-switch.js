@@ -3,6 +3,9 @@ angular.module('uiSwitch', [])
 .directive('switch', function(){
   return {
     restrict: 'AE'
+  , link: function(scope, element) {
+      element.removeAttr('disabled');
+    }
   , replace: true
   , transclude: true
   , template: function(element, attrs) {
